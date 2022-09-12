@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-09-12T13:22:35Z" name="Default suite" finished-at="2022-09-12T13:23:04Z" duration-ms="28664">
+    <groups>
+    </groups>
+    <test started-at="2022-09-12T13:22:35Z" name="Default test" finished-at="2022-09-12T13:23:04Z" duration-ms="28664">
+      <class name="testpages.BritishWeb_HomepageTest">
+        <test-method is-config="true" signature="intialization()[pri:0, instance:testpages.BritishWeb_HomepageTest@6d167f58]" started-at="2022-09-12T13:22:35Z" name="intialization" finished-at="2022-09-12T13:22:49Z" duration-ms="13908" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intialization -->
+        <test-method signature="clickCreateAccount()[pri:1, instance:testpages.BritishWeb_HomepageTest@6d167f58]" started-at="2022-09-12T13:22:49Z" name="clickCreateAccount" finished-at="2022-09-12T13:22:50Z" duration-ms="1163" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickCreateAccount -->
+        <test-method signature="checkBritishRedCrossMenuList()[pri:2, instance:testpages.BritishWeb_HomepageTest@6d167f58]" started-at="2022-09-12T13:22:50Z" name="checkBritishRedCrossMenuList" finished-at="2022-09-12T13:23:04Z" duration-ms="13563" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkBritishRedCrossMenuList -->
+      </class> <!-- testpages.BritishWeb_HomepageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
