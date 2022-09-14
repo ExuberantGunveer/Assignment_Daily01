@@ -20,8 +20,6 @@ public class BritishWeb_Homepage extends TestBase implements Britishweb_Interfac
 	
     private String createAccountDetails = "//input[@id='%s']";
 	
-//	private String menuTabs = "//li[@class='nav-bar__item']//a[contains(text(),'%s')]";
-	
 	private String clothingOption = "//li[@class='nav-dropdown__item ']//a[contains(text(),'%s')]";
 	
 	private String productLink = "//a[contains(text(),'%s')]";
@@ -54,22 +52,37 @@ public class BritishWeb_Homepage extends TestBase implements Britishweb_Interfac
 	@FindBy(xpath = "//input[@class='search-bar__input']")
 	WebElement searchBar ;
 	
+	@FindBy(xpath = "//a[contains(text(),'Designed by Refugees Large Fresh Lemongrass Soy Wax Scented Ca...')]")
+	WebElement firstProduct;
+	
+	@FindBy(xpath="//button[contains(text(),'Add to cart')]")
+	WebElement addToCart; 
+	
+	@FindBy(xpath = "//span[@class='header__cart-count']")
+	WebElement addToCartValue ;
 
+	@FindBy(xpath = "(//input[@inputmode='numeric'])[2]")
+	WebElement quantityValue;
 	
 	public BritishWeb_Homepage() {	
 	
 		PageFactory.initElements(driver, this);
 	}
 		
-	public void createAccount() {
+	public void createAccount() {		
 		
+	// Handled Cookies Message	
 		driver.findElement(By.xpath("//button[@id='onetrust-accept-btn-handler']")).click();
+	// Get the Title of Page	
 		String britishWebTitle = driver.getTitle();
 		System.out.println("The Title of Website is : "+britishWebTitle);
+	// Verified The Title of HomePage	
 		Assert.assertEquals( prop.getProperty("expectedTitle"), britishWebTitle,"title is mis-match");
+	// Verified The Title of HomePage with Soft Assertion		
 		SoftAssert sf = new SoftAssert();
 		sf.assertEquals(prop.getProperty("expectedText"), britishWebTitle,"Title of Website is not Matching");
-		myAccountTab.click();
+	// Enter The Details For New Account
+		myAccountTab.click();		
 		createAccountLink.click();
 		driver.findElement(By.xpath(String.format(createAccountDetails, CreateAccount_BritishWebEnums.CREATEACCOUNT_Name_FirstName.getResoucesName()))).sendKeys("Gunveer");
 		driver.findElement(By.xpath(String.format(createAccountDetails, CreateAccount_BritishWebEnums.CREATEACCOUNT_Name_LastName.getResoucesName()))).sendKeys("Singh");
@@ -77,12 +90,14 @@ public class BritishWeb_Homepage extends TestBase implements Britishweb_Interfac
 		driver.findElement(By.xpath(String.format(createAccountDetails, CreateAccount_BritishWebEnums.CREATEACCOUNT_Name_Password.getResoucesName()))).sendKeys("HelloWorld@123");
 		}
 
-	public void clickClothingTab() {
+	public void clickClothingTab() {	
 		
+	// Click on Clothing Tab Menu And Selecting The Different Value from List 
 		for(Clothing_BritishWebEnums c : Clothing_BritishWebEnums.values()) {			
 			Actions action = new Actions(driver);
 			action.moveToElement(clothingTab).build().perform();
 			driver.findElement(By.xpath(String.format(clothingOption, c.getResoucesName()))).click();
+	// Verify The Title of Selected Page from List		
 			String expectedtitle = driver.getTitle();
 			System.out.println("The Title of " + expectedtitle + " Page is : "+expectedtitle);
 			Assert.assertEquals(c.getResoucesName(), expectedtitle, "Title is Not Matching");
@@ -91,10 +106,12 @@ public class BritishWeb_Homepage extends TestBase implements Britishweb_Interfac
 
 	public void clickStationeryTab() {		
 		
-			for(Stationery_BritishWebEnums s : Stationery_BritishWebEnums.values()) {
+	// Click on StationeryTab Menu And Selecting The Different Value from List 
+		for(Stationery_BritishWebEnums s : Stationery_BritishWebEnums.values()) {
 			Actions action = new Actions(driver);
 			action.moveToElement(stationeryTab).build().perform();
 			driver.findElement(By.xpath(String.format(stationery, s.getResoucesName()))).click();
+	// Verify The Title of Selected Page from List		
 			String expectedtitle = driver.getTitle();
 			System.out.println("The Title of " + expectedtitle + " Page is : "+expectedtitle);
 			Assert.assertEquals(s.getResoucesName(), expectedtitle, "Title is Not Matching");
@@ -103,23 +120,17 @@ public class BritishWeb_Homepage extends TestBase implements Britishweb_Interfac
 
 	public void clickHomewareTab() {
 	
+	// Click on HomewareTab Menu And Selecting The Different Value from List 
 		for(Homeware_BritishWebEnums h : Homeware_BritishWebEnums.values()) {
 			Actions action = new Actions(driver);
 			action.moveToElement(homewareTab).build().perform();
 			driver.findElement(By.xpath(String.format(homeware, h.getResoucesName()))).click();
+	// Verify The Title of Selected Page from List		
 			String expectedtitle = driver.getTitle();
 			System.out.println("The Title of " + expectedtitle + " Page is : "+expectedtitle);
 			Assert.assertEquals(h.getResoucesName(), expectedtitle, "Title is Not Matching");
 			}		
 	}
 
-	public void addProductToCart() {
-	
-		
-	}
-
-	
-	
-	
 	
 }

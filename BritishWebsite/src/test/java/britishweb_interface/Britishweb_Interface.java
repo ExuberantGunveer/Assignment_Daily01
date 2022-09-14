@@ -7,7 +7,7 @@ public interface Britishweb_Interface {
 	void clickClothingTab();
 	void clickStationeryTab();
 	void clickHomewareTab();
-	void addProductToCart();
+	
 	
 	
 }

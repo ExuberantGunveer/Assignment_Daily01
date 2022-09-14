@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-14T07:40:45Z" name="All Test Suite" finished-at="2022-09-14T07:41:28Z" duration-ms="43266">
+  <suite started-at="2022-09-14T16:04:31Z" name="Default suite" finished-at="2022-09-14T16:05:07Z" duration-ms="36065">
     <groups>
     </groups>
-    <test started-at="2022-09-14T07:40:45Z" name="British Web Page Test" finished-at="2022-09-14T07:41:28Z" duration-ms="43266">
+    <test started-at="2022-09-14T16:04:31Z" name="Default test" finished-at="2022-09-14T16:05:07Z" duration-ms="36065">
       <class name="testpages.BritishWeb_HomepageTest">
-        <test-method is-config="true" signature="intialization()[pri:0, instance:testpages.BritishWeb_HomepageTest@65b104b9]" started-at="2022-09-14T07:40:45Z" name="intialization" finished-at="2022-09-14T07:40:56Z" duration-ms="10789" status="PASS">
+        <test-method is-config="true" signature="intialization()[pri:0, instance:testpages.BritishWeb_HomepageTest@6d167f58]" started-at="2022-09-14T16:04:31Z" name="intialization" finished-at="2022-09-14T16:04:37Z" duration-ms="5991" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intialization -->
-        <test-method signature="clickCreateAccount()[pri:1, instance:testpages.BritishWeb_HomepageTest@65b104b9]" started-at="2022-09-14T07:40:56Z" name="clickCreateAccount" finished-at="2022-09-14T07:40:57Z" duration-ms="1208" status="PASS">
+        <test-method signature="clickCreateAccount()[pri:1, instance:testpages.BritishWeb_HomepageTest@6d167f58]" started-at="2022-09-14T16:04:37Z" name="clickCreateAccount" finished-at="2022-09-14T16:04:39Z" duration-ms="1708" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickCreateAccount -->
-        <test-method signature="checkBritishRedCrossMenuList()[pri:2, instance:testpages.BritishWeb_HomepageTest@65b104b9]" started-at="2022-09-14T07:40:57Z" name="checkBritishRedCrossMenuList" finished-at="2022-09-14T07:41:28Z" duration-ms="30867" status="PASS">
+        <test-method signature="checkBritishRedCrossMenuList()[pri:2, instance:testpages.BritishWeb_HomepageTest@6d167f58]" started-at="2022-09-14T16:04:39Z" name="checkBritishRedCrossMenuList" finished-at="2022-09-14T16:05:07Z" duration-ms="28336" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkBritishRedCrossMenuList -->
       </class> <!-- testpages.BritishWeb_HomepageTest -->
-    </test> <!-- British Web Page Test -->
-  </suite> <!-- All Test Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

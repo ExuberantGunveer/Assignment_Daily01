@@ -8,12 +8,19 @@
     </listeners>
 
 
-  <test  name="British Web Page Test">
+  <test  name="BritishWeb HomePage Test">
 
     <classes>      	  
       <class name="testpages.BritishWeb_HomepageTest"/>
     </classes>
   </test>
 
+
+  <test  name="BritishWeb Page Add_To_Cart Test">
+  
+    <classes>      	  
+      <class name="testpages.BritishWeb_AddToCartTest"/>
+    </classes>
+  </test>
 
 </suite> <!-- Suite -->
