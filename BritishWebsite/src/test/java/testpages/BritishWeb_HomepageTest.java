@@ -10,14 +10,15 @@ public class BritishWeb_HomepageTest extends TestBase {
 	public void clickCreateAccount()  
 	{
 		obj.getHomePage().createAccount();
-		
 	}	
 	
 	
 	@Test(priority = 2)
-	public void checkBritishRedCrossMenuList() {
-
+	public void checkBritishRedCrossMenuList()
+	{
 		obj.getHomePage().clickClothingTab();	
+		obj.getHomePage().clickStationeryTab();
+		obj.getHomePage().clickHomewareTab();
 	}
 	
 	

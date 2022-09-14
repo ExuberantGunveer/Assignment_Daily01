@@ -21,7 +21,7 @@ public class TestBase {
 		try{
 			
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"//src//test//java//config//Config.properties");
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"/src/test/java/config/Config.properties");
 			prop.load(ip);
 			}catch(FileNotFoundException e){
 				e.printStackTrace();

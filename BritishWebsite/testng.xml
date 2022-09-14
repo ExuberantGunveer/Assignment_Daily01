@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" >
+
+
+    <listeners>
+        <listener class-name="config.Listners"/>
+    </listeners>
+
+
+  <test  name="British Web Page Test">
+
+    <classes>      	  
+      <class name="testpages.BritishWeb_HomepageTest"/>
+    </classes>
+  </test>
+
+
+</suite> <!-- Suite -->
